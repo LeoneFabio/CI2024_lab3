@@ -58,6 +58,7 @@ This project implements **Path Search** algorithms and saves the main results in
 3. **DFS Limitations**:
    - DFS's deep exploration strategy can lead to inefficiencies as it does not guarantee the shortest path.
 
+---
 
 ## Results
 
@@ -68,6 +69,8 @@ The table below summarizes the results for a **3x3 Gem Puzzle**, derived from a 
 | Breadth First Search (BFS)       | 22      | 649    | 0.0339     | 0.02147220             |
 | Depth First Search (DFS)         | 22      | 83915  | 0.0003     | 1.36755380             |
 | A*                               | 27200   | 28427  | 0.9568     | 0.55120730             |
+
+---
 
 ## Conclusions and Insights
 
