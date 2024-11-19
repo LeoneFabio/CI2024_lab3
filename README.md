@@ -66,20 +66,20 @@ The table below summarizes the results for a **3x3 Gem Puzzle**, derived from a 
 
 | Algorithm                        | Quality |  Cost  | Efficiency | Running time (seconds) |
 |----------------------------------|---------|--------|------------|------------------------|
-| Breadth First Search (BFS)       | 22      | 649    | 0.0339     | 0.02147220             |
-| Depth First Search (DFS)         | 22      | 83915  | 0.0003     | 1.36755380             |
-| A*                               | 27200   | 28427  | 0.9568     | 0.55120730             |
+| A*       | 22      | 649    | 0.0339     | 0.02147220             |
+| Breadth First Search (BFS)         | 22      | 83915  | 0.0003     | 1.36755380             |
+| Depth First Search (DFS)                               | 27200   | 28427  | 0.9568     | 0.55120730             |
 
 ---
 
 ## Conclusions and Insights
 
 1. **A\* Outperforms Other Algorithms**:
-   - A* consistently finds the shortest path with the lowest cost and highest efficiency due to its heuristic-driven search.
+   - A* consistently finds the shortest path with the lowest cost due to its heuristic-driven search.
    - The Manhattan Distance heuristic proves effective for guiding the algorithm in tile-based puzzles.
 
 2. **DFS is Unsuitable for Large Problems**:
-   - DFS struggles with inefficiency, often evaluating unnecessary nodes and taking excessive time for deeper searches.
+   - DFS often evaluates unnecessary nodes and takes excessive time for deeper searches.
 
 3. **BFS is Reliable but Costly**:
    - BFS guarantees an optimal solution but suffers from high memory and computational costs as puzzle size increases.
