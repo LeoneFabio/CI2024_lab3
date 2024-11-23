@@ -23,7 +23,6 @@ This project implements and compares three path-search algorithms for solving th
 - **A\***: A-star algorithm
 - **Quality**: Length of the final path; the minimum path needed to reach the goal state (sorted puzzle) from the random starting state.
 - **Cost**: Number of nodes evaluated during the search process.
-- **Efficiency**: Ratio of **Quality/Cost**, representing the effectiveness of each node evaluation.
 - **Running Time**: Time taken to complete the search.
 
 ---
@@ -64,11 +63,19 @@ This project implements **Path Search** algorithms and saves the main results in
 
 The table below summarizes the results for a **3x3 Gem Puzzle**, derived from a single execution of each algorithm. These metrics highlight the trade-offs between path optimality, computational cost, and runtime.
 
-| Algorithm                        | Quality |  Cost  | Efficiency | Running time (seconds) |
-|----------------------------------|---------|--------|------------|------------------------|
-| A*       | 22      | 649    | 0.0339     | 0.02147220             |
-| Breadth First Search (BFS)         | 22      | 83915  | 0.0003     | 1.36755380             |
-| Depth First Search (DFS)                               | 27200   | 28427  | 0.9568     | 0.55120730             |
+| Algorithm                        | Quality |  Cost  | Running time (seconds) |
+|----------------------------------|---------|--------|------------------------|
+| A*       | 22      | 700    | 0.10939980             |
+| Breadth First Search (BFS)         | 22      | 86437  | 3.97290080             |
+| Depth First Search (DFS)                               | 65660   | 92817  | 4.66729150             |
+
+### Quality vs Cost Plot
+
+The following plot shows the relationship between Quality (X-axis) and Cost (Y-axis) for the different algorithms.
+
+The more bottom-left the point is, the better the algorithm performs.
+
+![Quality vs Cost](plots/Algo_performances.png)
 
 ---
 
@@ -78,11 +85,12 @@ The table below summarizes the results for a **3x3 Gem Puzzle**, derived from a 
    - A* consistently finds the shortest path with the lowest cost due to its heuristic-driven search.
    - The Manhattan Distance heuristic proves effective for guiding the algorithm in tile-based puzzles.
 
-2. **DFS is Unsuitable for Large Problems**:
+2. **BFS is Reliable but Costly**:
+   - BFS guarantees an optimal solution but suffers from high memory and computational costs as puzzle size increases.
+
+3. **DFS is Unsuitable for Large Problems**:
    - DFS often evaluates unnecessary nodes and takes excessive time for deeper searches.
 
-3. **BFS is Reliable but Costly**:
-   - BFS guarantees an optimal solution but suffers from high memory and computational costs as puzzle size increases.
 
 ---
 
